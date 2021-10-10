@@ -1,0 +1,14 @@
+{
+    "name": "inventory-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "tasks.max": "1",
+        "database.hostname": "database",
+        "database.port": "5432",
+        "database.user": "codimd",
+        "database.password": "SQ6EPGsH2jbRKASA",
+        "database.dbname" : "codimd",
+        "database.server.name": "dbserver1",
+        "schema.include": "public"
+    }
+}
