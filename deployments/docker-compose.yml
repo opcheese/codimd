@@ -86,7 +86,7 @@ services:
 
   pgbackups3:
     build:
-       context: ../../backup
+       context: ../backup
        dockerfile: ./Dockerfile 
     links:
       - database
