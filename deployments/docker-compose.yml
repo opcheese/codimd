@@ -22,7 +22,7 @@ services:
     image: debezium/postgres:11
     environment:
       - POSTGRES_USER=codimd
-      - POSTGRES_PASSWORD=SQ6EPGsH2jbRKASA
+      - POSTGRES_PASSWORD=
       - POSTGRES_DB=codimd
     volumes:
       - "postgres-data-prod:/var/lib/postgresql/data"
@@ -63,17 +63,17 @@ services:
         RUNTIME: hackmdio/runtime:node-10-0baafb79
         BUILDPACK: hackmdio/buildpack:node-10-0baafb79
     environment:
-      - CMD_DB_URL=postgres://codimd:SQ6EPGsH2jbRKASA@database/codimd
+      - CMD_DB_URL=postgres://codimd:@database/codimd
       - CMD_USECDN=false
       - CMD_DOMAIN=codimd.ludentes.ru
       - CMD_URL_ADDPORT=443
       - CMD_PROTOCOL_USESSL=true
       - CMD_GITLAB_BASEURL=https://gitlab.ludentes.ru
-      - CMD_GITLAB_CLIENTID=a1658156c91a5779dd5796c0ee48bd99a5b2194ffb3c75806bafc7df13df280b
-      - CMD_GITLAB_CLIENTSECRET=1935443ab4d5036cf06974a5cd87675c8a5d9b49122ae6c69bc7b5a9512bfc4d
+      - CMD_GITLAB_CLIENTID=
+      - CMD_GITLAB_CLIENTSECRET=
       - CMD_IMAGE_UPLOAD_TYPE=s3
-      - CMD_S3_ACCESS_KEY_ID=AKIAVFX5MFLDKJKBG4BQ
-      - CMD_S3_SECRET_ACCESS_KEY=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
+      - CMD_S3_ACCESS_KEY_ID=
+      - CMD_S3_SECRET_ACCESS_KEY=
       - CMD_S3_REGION=eu-central-1
       - CMD_S3_BUCKET=codemd 
     depends_on:
@@ -93,8 +93,8 @@ services:
     environment:
       SCHEDULE: '@daily'
       S3_REGION: eu-central-1
-      S3_ACCESS_KEY_ID: AKIAVFX5MFLDKJKBG4BQ
-      S3_SECRET_ACCESS_KEY: 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
+      S3_ACCESS_KEY_ID: 
+      S3_SECRET_ACCESS_KEY: 
       S3_BUCKET: codemdbackup
       S3_PREFIX: backup
       POSTGRES_HOST: database
